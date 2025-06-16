@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: file-upload
+
+aws:
+  region: us-east-1
+  s3:
+    bucket: fileuploadinfrastack-fileuploadbucketdf219b4d-aju17vmilvku
+  credentials:
+    access-key: dummyKey
+    secret-key: dummySecret
+
+
+
+

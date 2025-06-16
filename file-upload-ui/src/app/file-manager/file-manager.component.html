@@ -1,0 +1,19 @@
+<h2>File Manager</h2>
+
+<input type="file" (change)="onFileSelected($event)" />
+<button (click)="upload()">Upload</button>
+
+<ul>
+  <li *ngFor="let file of files">
+    <span *ngIf="isFolder(file)" (click)="openFolder(file)" style="cursor: pointer;">
+      📁 {{ file }}
+    </span>
+    <span *ngIf="!isFolder(file)">
+      📄 {{ file }}
+      <button (click)="download(file)">Download</button>
+    </span>
+  </li>
+</ul>
+
+<button *ngIf="prefix" (click)="prefix=''; fetchFiles()">⬅️ Back</button>
+
